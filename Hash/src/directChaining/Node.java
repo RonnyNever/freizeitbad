@@ -4,7 +4,7 @@ public class Node <T, T2>
 {
     private T key;
     private T2 value;
-    private Node next;
+    private Node next; // <T,T2> mitte
 
     public Node(T key, T2 value, Node next)
     {
