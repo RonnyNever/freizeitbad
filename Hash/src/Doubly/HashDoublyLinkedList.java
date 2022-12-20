@@ -1,4 +1,4 @@
-package haupt;
+package Doubly;
 //Java Hashtabelle LinkedList mit DoublyLinkedList
 
 class DoublyLinked {

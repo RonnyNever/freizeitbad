@@ -1,10 +1,11 @@
-package haupt;
+package seperate;
 
 // Hash Tabelle mit Separate Chaining ( Collisionserkennung )
 
 import java.util.ArrayList;
 import java.util.Objects;
-  
+
+
 // Node von Chain
 class HashNode<K, V> {
     K key;
