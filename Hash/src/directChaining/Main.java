@@ -10,7 +10,8 @@ public class Main {
 
 	        dchainMap.insert(1,1336);
 	        dchainMap.insert(2,1337);
-	        dchainMap.insert(3,1339);
+	        dchainMap.insert(3,1339);   
+	        dchainMap.insert(3,13329);
 
 	        dchainMap.printBuckets();
 
