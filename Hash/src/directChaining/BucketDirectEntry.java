@@ -1,7 +1,5 @@
 package directChaining;
 
-
-
 public class BucketDirectEntry<T, T2> {
 
     private int curSize;
@@ -84,24 +82,25 @@ public class BucketDirectEntry<T, T2> {
      * Adds or updates a pair
      * @param node
      */
-    public void insert(Node<T,T2> node)
+    public boolean insert(Node<T,T2> node)
     {
         if(this.isEmpty()) {
             start = node;
             curSize = 1;
-            return;
+            return false;
         }
 
         var n2 = searchNode(node.getKey());
         if(n2 != null)
         {
             n2.setValue(node.getValue());
-            return;
+            return true;
         }
 
         setCursor(curSize-1);
         cursor.setNext(node);
         curSize++;
+        return false;
     }
 
     /**

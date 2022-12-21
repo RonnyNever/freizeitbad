@@ -39,8 +39,8 @@ public class directChainMap<T,T2> {
     {
         var hashedIndex = hash(key);
         var newNode = new Node<T,T2>(key, val, null);
-        dE[hashedIndex].insert(newNode);
-        curSize++;
+        if(!dE[hashedIndex].insert(newNode))
+            curSize++;
         return;
     }
 
@@ -96,6 +96,53 @@ public class directChainMap<T,T2> {
 
             System.out.printf("\n");
         }
+    }
 
+    /**
+     * Gets the bucket entries
+     * @return
+     */
+    public BucketDirectEntry<T, T2>[] getdE() {
+        return dE;
+    }
+
+    /**
+     * Sets the bucket entries
+     * @param dE
+     */
+    public void setdE(BucketDirectEntry<T, T2>[] dE) {
+        this.dE = dE;
+    }
+
+    /**
+     * Returns the max size
+     * @return
+     */
+    public int getMaxSize() {
+        return maxSize;
+    }
+
+    /**
+     * Sets the max size
+     * @param maxSize
+     */
+    public void setMaxSize(int maxSize) {
+        this.maxSize = maxSize;
+    }
+
+    /**
+     * Gets the current size
+     * @return
+     */
+    public int getCurSize() {
+        return curSize;
+    }
+
+    /**
+     * Sets the current size
+     * @param curSize
+     */
+    public void setCurSize(int curSize) {
+        this.curSize = curSize;
     }
 }
